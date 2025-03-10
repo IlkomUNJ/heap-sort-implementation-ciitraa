@@ -2,7 +2,7 @@
 using namespace std;
 
 void maxHeapify(int arr[], int n, int i) {
-    int largest = i;       // Initialize largest as root
+    int largest = i;
     int left = 2 * i + 1;  // Left child
     int right = 2 * i + 2; // Right child
 
@@ -20,7 +20,6 @@ void maxHeapify(int arr[], int n, int i) {
 
 // Function to build a max heap
 void buildMaxHeap(int arr[], int n) {
-    // Index of last non-leaf node
     for (int i = n / 2 - 1; i >= 0; i--) {
         maxHeapify(arr, n, i);
     }
